@@ -22,7 +22,7 @@ export default function RootLayout({
   );
 }
 
-function Link(props){
+function Link(props : any){
   const {link, name} = props
   return(
     <a href={link}>{name}</a>
