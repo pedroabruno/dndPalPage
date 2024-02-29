@@ -1,0 +1,1 @@
+export const API_URL = 'https://dnd-pal-sv.vercel.app/monsters'

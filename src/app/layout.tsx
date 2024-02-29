@@ -11,10 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-      <div id="menu" style={{backgroundColor: "#0c0d0fb3"}}>
+      <body className="bg-gray-400">
+      <div id="menu" className="bg-gray-300 text-gray-800 flex p-2">
         <Link name="Monsters" link="monsters"/>
-        <Link name="Us" link="us"/>
+        <Link name="Me" link="me"/>
       </div>
       {children}
       </body>
@@ -25,6 +25,8 @@ export default function RootLayout({
 function Link(props : any){
   const {link, name} = props
   return(
-    <a href={link}>{name}</a>
+    <div className="px-5">
+        <a href={link}>{name}</a>
+    </div>
   )
 }
