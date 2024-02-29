@@ -2,10 +2,11 @@
 import MonsterCard from "@/components/monsterCard";
 import { useEffect, useState } from "react";
 import { API_URL } from "@/resources/routes";
+import { Monster } from "@/types/monsterType";
 
 export default function Page() {
-    const [monsterList, setMonsterList] = useState([])
-    const [currentPage, setCurrentPage] = useState(0)
+    const [monsterList, setMonsterList] = useState<Monster[]>([])
+    const [currentPage, setCurrentPage] = useState<number>(0)
 
     useEffect(()=>{
         fetch(API_URL, {
