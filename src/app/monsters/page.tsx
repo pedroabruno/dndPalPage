@@ -1,7 +1,7 @@
 'use client'
 import MonsterCard from "@/components/monsterCard";
 import { useEffect, useState } from "react";
-import { GET_MONSTERS } from "@/resources/routes";
+import { ROUTES } from "@/resources/routes";
 import { Monster } from "@/types/monsterType";
 
 export default function Page() {
@@ -9,7 +9,7 @@ export default function Page() {
     const [currentPage, setCurrentPage] = useState<number>(0)
 
     useEffect(()=>{
-        fetch(GET_MONSTERS, {
+        fetch(ROUTES.GET_MONSTERS, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

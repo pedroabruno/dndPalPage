@@ -1,5 +1,5 @@
 'use client'
-import { GET_BATTLES } from "@/resources/routes";
+import { ROUTES } from "@/resources/routes";
 import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip";
 import {
@@ -16,7 +16,7 @@ export default function Battles() {
     const[encounters, setEncounters] = useState<{name:string, iddifficulty:string, experience:number, status:string}[]>([])
     
     useEffect(()=>{
-        fetch(GET_BATTLES)
+        fetch(ROUTES.GET_BATTLES)
         .then(data=> data.json())
         .then(json=> setEncounters(json['encounters']))
     },[])
