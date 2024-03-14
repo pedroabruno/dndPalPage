@@ -1,9 +1,12 @@
+'use client'
 import Image from "next/image";
-
+import {NextUIProvider} from "@nextui-org/system";
 export default function Home() {
   return (
-    <div>
-        <a>MAIN PAGE</a>
-    </div>
+    <NextUIProvider>
+        <div>
+            <a>MAIN PAGE</a>
+        </div>
+    </NextUIProvider>
   );
 }
